@@ -31,6 +31,6 @@ VOLUME ["/var/log/nginx"]
 WORKDIR /etc/nginx
 COPY nginx.conf /etc/nginx/conf/
 ADD src/ /var/www 
-EXPOSE 80 443
+EXPOSE 8080 8443
 
 CMD ["nginx", "-g", "daemon off;"]
