@@ -28,7 +28,7 @@ RUN apk --update add openssl-dev pcre-dev zlib-dev wget build-base && \
 RUN ln -sf /dev/stdout /var/log/nginx/access.log
 RUN ln -sf /dev/stderr /var/log/nginx/error.log
 VOLUME ["/var/log/nginx"]
-WORKDIR /etc/nginx
+WORKDIR /var/www
 COPY nginx.conf /etc/nginx/conf/
 ADD src/ /var/www 
 EXPOSE 8080 8443
